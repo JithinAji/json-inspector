@@ -18,12 +18,12 @@ function CreateSetInput({ onSet  }) {
   return(
     <div>
       <input 
-        placholder="path (eg: a.b)" 
+        placeholder="path (eg: x.y)" 
         value={path}
         onChange={(e) => setPath(e.target.value)}
       />
       <input 
-        placholder="value" 
+        placeholder="value" 
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />
