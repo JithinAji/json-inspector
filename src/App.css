@@ -1,0 +1,10 @@
+.error__message {
+  color: #b00020;              /* strong red */
+  background-color: #fdecea;   /* light red background */
+  border: 1px solid #f5c2c7;   /* subtle border */
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin: 10px 0;
+  font-size: 14px;
+  font-family: monospace;
+}
