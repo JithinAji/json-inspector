@@ -4,8 +4,6 @@ import createJSONEngine from './utils/json-engine.js'
 import { DisplayJSON  } from './RecursiveJSON'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   let jsonData = {
     a: 1,
     b: 3,
