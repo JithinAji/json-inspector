@@ -16,13 +16,13 @@ import { useState, useRef } from 'react'
 
 const getType = (data) => {
   let type = ""
-  conso.log(typeof data)
+  console.log(typeof data)
+  if(Array.isArray(data)){
+    return "[]"
+  }
   switch (typeof data) {
     case 'object':
       type = '{}'
-      break
-    case 'array':
-      type = '[]'
       break
   }
   return type
@@ -33,6 +33,7 @@ export function DisplayJSON({ data , label = null, depth = 0}) {
   let keys = Object.keys(data)
 
   const [open, setOpen] = useState(true)
+  console.log(data)
   let type = getType(myObj)
 
   return (
@@ -45,8 +46,8 @@ export function DisplayJSON({ data , label = null, depth = 0}) {
             return (
             (typeof myObj[key] == 'array' || typeof myObj[key] == 'object') ?
               (<DisplayJSON key={key} data={ myObj[key] } label= { key } depth={depth + 1} />) :
-              (<div key= {key}>
-               {open && <span style={{paddingLeft: `${12 + depth * 12}px`}} >{key} : {myObj[key]}</span>}
+              (<div key={key}>
+               {open && <span key={key} style={{paddingLeft: `${12 + depth * 12}px`}} >{key} : {myObj[key]}</span>}
                <br />
                </div>
               )
