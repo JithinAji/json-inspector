@@ -10,8 +10,8 @@ function App() {
     c: {
       d: 2,
       e: 4
-    }
-    d: [0: 1,1: 2,2: 3]
+    },
+    d: [0, 1, 2]
   }
   let value = createJSONEngine(jsonData)
 
